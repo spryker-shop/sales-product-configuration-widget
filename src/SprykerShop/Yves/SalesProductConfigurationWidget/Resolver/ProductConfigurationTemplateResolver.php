@@ -25,11 +25,6 @@ class ProductConfigurationTemplateResolver implements ProductConfigurationTempla
         $this->salesProductConfigurationRenderStrategyPlugins = $salesProductConfigurationRenderStrategyPlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderItemConfigurationTransfer $salesOrderItemConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationTemplateTransfer
-     */
     public function resolveProductConfigurationTemplate(
         SalesOrderItemConfigurationTransfer $salesOrderItemConfigurationTransfer
     ): ProductConfigurationTemplateTransfer {

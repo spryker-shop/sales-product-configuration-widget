@@ -26,11 +26,6 @@ class SalesProductConfigurationWidgetDependencyProvider extends AbstractBundleDe
      */
     public const CLIENT_SALES_PRODUCT_CONFIGURATION = 'CLIENT_SALES_PRODUCT_CONFIGURATION';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -40,11 +35,6 @@ class SalesProductConfigurationWidgetDependencyProvider extends AbstractBundleDe
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addSalesProductConfigurationRenderStrategyPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_SALES_PRODUCT_CONFIGURATION_RENDER_STRATEGY, function () {
@@ -54,11 +44,6 @@ class SalesProductConfigurationWidgetDependencyProvider extends AbstractBundleDe
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addSalesProductConfigurationClient(Container $container): Container
     {
         $container->set(static::CLIENT_SALES_PRODUCT_CONFIGURATION, function (Container $container) {

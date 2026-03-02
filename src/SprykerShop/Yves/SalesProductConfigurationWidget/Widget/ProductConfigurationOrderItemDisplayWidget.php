@@ -31,9 +31,6 @@ class ProductConfigurationOrderItemDisplayWidget extends AbstractWidget
      */
     protected const PARAMETER_PRODUCT_CONFIGURATION_TEMPLATE = 'productConfigurationTemplate';
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     */
     public function __construct(ItemTransfer $itemTransfer)
     {
         $this->addIsVisibleParameter($itemTransfer);
@@ -46,47 +43,26 @@ class ProductConfigurationOrderItemDisplayWidget extends AbstractWidget
         $this->addProductConfigurationTemplateParameter($itemTransfer);
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'ProductConfigurationOrderItemDisplayWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@SalesProductConfigurationWidget/views/order-detail-configuration/order-detail-configuration.twig';
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     *
-     * @return void
-     */
     protected function addIsVisibleParameter(ItemTransfer $itemTransfer): void
     {
         $this->addParameter(static::PARAMETER_IS_VISIBLE, $itemTransfer->getSalesOrderItemConfiguration() !== null);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     *
-     * @return void
-     */
     protected function addSalesOrderItemConfigurationParameter(ItemTransfer $itemTransfer): void
     {
         $this->addParameter(static::PARAMETER_SALES_ORDER_ITEM_CONFIGURATION, $itemTransfer->getSalesOrderItemConfiguration());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     *
-     * @return void
-     */
     protected function addProductConfigurationTemplateParameter(ItemTransfer $itemTransfer): void
     {
         $productConfigurationTemplateTransfer = $this->getFactory()

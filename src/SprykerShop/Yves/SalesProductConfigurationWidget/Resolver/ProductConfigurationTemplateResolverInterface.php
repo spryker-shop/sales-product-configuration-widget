@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\SalesOrderItemConfigurationTransfer;
 
 interface ProductConfigurationTemplateResolverInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\SalesOrderItemConfigurationTransfer $salesOrderItemConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationTemplateTransfer
-     */
     public function resolveProductConfigurationTemplate(
         SalesOrderItemConfigurationTransfer $salesOrderItemConfigurationTransfer
     ): ProductConfigurationTemplateTransfer;
