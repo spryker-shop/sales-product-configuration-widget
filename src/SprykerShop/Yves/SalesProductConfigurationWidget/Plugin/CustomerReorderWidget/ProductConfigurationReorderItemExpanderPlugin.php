@@ -19,14 +19,13 @@ use SprykerShop\Yves\CustomerReorderWidgetExtension\Dependency\Plugin\ReorderIte
 class ProductConfigurationReorderItemExpanderPlugin extends AbstractPlugin implements ReorderItemExpanderPluginInterface
 {
     /**
-     * Specification:
+     * {@inheritDoc}
      * - Expands items with product configuration based on data from order items.
      * - Requires `Item::groupKey` and `Order::items::groupKey` to be set.
      *
      * @api
      *
      * @param array<\Generated\Shared\Transfer\ItemTransfer> $itemTransfers
-     * @param \Generated\Shared\Transfer\OrderTransfer $orderTransfer
      *
      * @return array<\Generated\Shared\Transfer\ItemTransfer>
      */
